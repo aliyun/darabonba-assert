@@ -20,12 +20,12 @@
     "className": "Client"
   },
   "php": {
-    "package": "Alibabacloud.TeaAssert",
-    "clientName": "TeaAssertClient",
+    "package": "Alibabacloud.DarabonbaAssert",
+    "clientName": "DarabonbaAssertClient",
     "packageInfo": {
-      "name": "alibabacloud/tea-assert",
-      "desc": "Alibaba Cloud Tea Assert library for PHP",
-      "github": "https://github.com/aliyun/assert-tea"
+      "name": "alibabacloud/darabonba-assert",
+      "desc": "Alibaba Cloud Darabonba Assert library for PHP",
+      "github": "https://github.com/aliyun/darabonba-assert"
     }
   }
 }

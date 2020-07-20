@@ -2,7 +2,7 @@
 
 class Autoloader
 {
-    const BASE_NAMESPACE = 'Alibabacloud\\TeaAssert\\';
+    const BASE_NAMESPACE = 'Alibabacloud\\DarabonbaAssert\\';
 
     const BASE_DIR = __DIR__ . DIRECTORY_SEPARATOR . 'src' . DIRECTORY_SEPARATOR;
 

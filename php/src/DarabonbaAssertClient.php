@@ -2,14 +2,12 @@
 
 // This file is auto-generated, don't edit it. Thanks.
 
-namespace Alibabacloud\TeaAssert;
-
-use PHPUnit\Framework\Assert;
+namespace Alibabacloud\DarabonbaAssert;
 
 /**
  * tea assert module.
  */
-class TeaAssertClient
+class DarabonbaAssertClient
 {
     /**
      * Judge the expect result is equal to the actual result.
@@ -39,9 +37,9 @@ class TeaAssertClient
             $expect->flatten(),
             $actual->flatten()
         ) == array_diff_assoc(
-                    $actual->flatten(),
-                    $expect->flatten()
-                );
+            $actual->flatten(),
+            $expect->flatten()
+        );
         Assert::assertTrue($equal, $message);
     }
 

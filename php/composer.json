@@ -1,16 +1,15 @@
 {
-  "name": "alibabacloud/tea-assert",
-  "description": "Alibaba Cloud Tea Assert library for PHP",
+  "name": "alibabacloud/darabonba-assert",
+  "description": "Alibaba Cloud Darabonba Assert library for PHP",
   "type": "library",
   "license": "Apache-2.0",
   "authors": [],
   "require": {
-    "php": ">5.5",
-    "phpunit/phpunit": "*"
+    "php": ">5.5"
   },
   "autoload": {
     "psr-4": {
-      "Alibabacloud\\TeaAssert\\": "src"
+      "Alibabacloud\\DarabonbaAssert\\": "src"
     }
   },
   "scripts": {
