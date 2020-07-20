@@ -1,0 +1,14 @@
+node_modules/
+*.tgz
+.libraries.json
+target/
+*.iml
+.idea/
+.project
+.classpath
+.settings/
+*.sum
+
+csharp/**/bin
+csharp/**/.vs
+csharp/**/obj

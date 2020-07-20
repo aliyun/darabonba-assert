@@ -1,0 +1,31 @@
+{
+  "name": "Assert",
+  "version": "0.1.8",
+  "scope": "alibabacloud",
+  "main": "./assert.tea",
+  "test": "./assert_test.tea",
+  "releases": {
+    "ts": "@ali/tea-assert:^1.2.0",
+    "java": "com.aliyun:tea-assert:0.1.0",
+    "csharp": "AlibabaCloud.TeaAssert:0.0.1",
+    "go": "github.com/alibabacloud-go/tea-assert/client:v1.0.0",
+    "php": "alibabacloud/tea-assert:^0.1.0"
+  },
+  "libraries": {},
+  "java": {
+    "package": "com.aliyun.teaassert"
+  },
+  "csharp": {
+    "namespace": "AlibabaCloud.TeaAssert",
+    "className": "Client"
+  },
+  "php": {
+    "package": "Alibabacloud.TeaAssert",
+    "clientName": "TeaAssertClient",
+    "packageInfo": {
+      "name": "alibabacloud/tea-assert",
+      "desc": "Alibaba Cloud Tea Assert library for PHP",
+      "github": "https://github.com/aliyun/assert-tea"
+    }
+  }
+}

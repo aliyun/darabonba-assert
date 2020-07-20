@@ -1,0 +1,31 @@
+import Assert;
+
+static function testEqual(): void {
+  Assert.equal("A", "A", "");
+}
+
+static function testFail(): void {
+  var ok = true;
+  try {
+    Assert.fail("should failed");
+  } catch (ex) {
+    ok = false;
+  }
+  Assert.equal(false, ok, "should failed");
+}
+
+static function testMapEql(): void {
+  var a: map[string]number = {
+    A = 1
+  };
+  var b: map[string]number = {
+    A = 1
+  };
+  Assert.mapEql(a, b, "");
+}
+
+static function testArrayEql(): void {
+  var a = ["A"];
+  var b = ["A"];
+  Assert.arrayEql(a, b, "");
+}
