@@ -8,7 +8,7 @@
     "ts": "@ali/tea-assert:^1.2.0",
     "java": "com.aliyun:tea-assert:0.1.0",
     "csharp": "AlibabaCloud.TeaAssert:0.0.1",
-    "go": "github.com/alibabacloud-go/tea-assert/client:v1.0.0",
+    "go": "github.com/alibabacloud-go/darabonba-assert/client:v1.0.0",
     "php": "alibabacloud/tea-assert:^0.1.0"
   },
   "libraries": {},
