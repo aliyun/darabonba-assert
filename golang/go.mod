@@ -1,4 +1,4 @@
-module github.com/alibabacloud-go/tea-assert
+module github.com/alibabacloud-go/darabonba-assert
 
 go 1.14
 
