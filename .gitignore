@@ -8,7 +8,7 @@ target/
 .classpath
 .settings/
 *.sum
-
+.DS_Store
 csharp/**/bin
 csharp/**/.vs
 csharp/**/obj
