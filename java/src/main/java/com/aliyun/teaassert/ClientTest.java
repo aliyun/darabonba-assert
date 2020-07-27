@@ -86,4 +86,15 @@ public class ClientTest {
         }
         Assertions.assertEquals(origin, test);
     }
+
+    @Test
+    public static void testContains() {
+        String a = "hello world";
+        String b = "world";
+        try {
+            Client.contains(a, b, "test string contains failed");
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
 }
