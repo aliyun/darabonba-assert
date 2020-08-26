@@ -1,0 +1,39 @@
+{
+  "name": "@ali/tea-assert",
+  "version": "1.4.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "mocha -r ts-node/register -r source-map-support/register test/**/*.spec.ts",
+    "test-cov": "nyc -e .ts -r=html -r=text -r=lcov npm run test",
+    "build": "tsc",
+    "prepublishOnly": "tsc"
+  },
+  "author": "page",
+  "license": "MIT",
+  "publishConfig": {
+    "registry": "https://registry.npm.alibaba-inc.com"
+  },
+  "devDependencies": {
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^12",
+    "codecov": "^3.6.1",
+    "mocha": "^6.2.0",
+    "nyc": "^14.1.1",
+    "source-map-support": "^0.5.13",
+    "ts-node": "^8.4.1",
+    "typescript": "^3.6.3"
+  },
+  "dependencies": {
+    "@ali/tea-assert": "1.0.0",
+    "@alicloud/oss-client": "^1.1.2",
+    "@alicloud/tea-typescript": "latest",
+    "@alicloud/tea-util": "^1.1.0",
+    "@types/expect.js": "^0.3.29",
+    "expect.js": "^0.3.1"
+  },
+  "files": [
+    "dist",
+    "lib"
+  ]
+}
