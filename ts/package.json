@@ -1,6 +1,6 @@
 {
-  "name": "@ali/tea-assert",
-  "version": "1.4.0",
+  "name": "@darabonba/assert",
+  "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
@@ -9,11 +9,8 @@
     "build": "tsc",
     "prepublishOnly": "tsc"
   },
-  "author": "page",
-  "license": "MIT",
-  "publishConfig": {
-    "registry": "https://registry.npm.alibaba-inc.com"
-  },
+  "author": "Alibaba Cloud OpenAPI Team",
+  "license": "Apache-2.0",
   "devDependencies": {
     "@types/mocha": "^5.2.7",
     "@types/node": "^12",
@@ -25,7 +22,6 @@
     "typescript": "^3.6.3"
   },
   "dependencies": {
-    "@ali/tea-assert": "1.0.0",
     "@alicloud/oss-client": "^1.1.2",
     "@alicloud/tea-typescript": "latest",
     "@alicloud/tea-util": "^1.1.0",
