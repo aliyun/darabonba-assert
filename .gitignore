@@ -12,3 +12,13 @@ target/
 csharp/**/bin
 csharp/**/.vs
 csharp/**/obj
+classworlds/
+com/
+commons*/
+javax/
+joda-time/
+junit/
+net/
+org/
+xmlpull/
+xpp3/

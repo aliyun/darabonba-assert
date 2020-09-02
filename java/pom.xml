@@ -4,7 +4,7 @@
 
     <groupId>com.aliyun</groupId>
     <artifactId>tea-assert</artifactId>
-    <version>0.1.0</version>
+    <version>0.1.1</version>
     <packaging>jar</packaging>
     <name>tea-assert</name>
     <description>Aliyun Tea Assert for Java
@@ -34,11 +34,13 @@
     </developers>
 
     <distributionManagement>
+        <snapshotRepository>
+            <id>sonatype-nexus-snapshots</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
         <repository>
-            <id>snapshots</id>
-            <name>alibaba Repositories Group</name>
-            <url>http://mvnrepo.alibaba-inc.com/mvn/snapshots</url>
-            <layout>default</layout>
+            <id>sonatype-nexus-staging</id>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
         </repository>
     </distributionManagement>
 
