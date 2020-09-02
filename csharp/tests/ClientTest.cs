@@ -97,5 +97,19 @@ namespace tests
             Client.ArrayEql(array2, array3, "tea assert equal fail");
         }
 
+        [Fact]
+        public void Test_Contains()
+        {
+            string a = "hello world";
+            string b = "world";
+
+            Client.Contains(a, b, "test string contains failed");
+
+            Assert.Equal("test string contains failed", Assert.Throws<TeaAssertException>(() =>
+            {
+                Client.Contains(a, "wr", "test string contains failed");
+            }).Message);
+        }
+
     }
 }
