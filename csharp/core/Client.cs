@@ -83,5 +83,24 @@ namespace AlibabaCloud.TeaAssert
             throw new TeaAssertException(message);
         }
 
+        /**
+        * Judge the actual contains the subStr
+        * @param actual the actual string
+        * @param subStr the substring
+        * @param message the message which the assertion error is thrown with
+        * @return void
+        */
+        public static void Contains(string actual, string subStr, string message)
+        {
+            try
+            {
+                Assert.Contains(subStr, actual);
+            }
+            catch (Exception e)
+            {
+                throw new TeaAssertException(message, e);
+            }
+        }
+
     }
 }
