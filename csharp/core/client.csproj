@@ -9,7 +9,7 @@
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <PackageReleaseNotes />
     <AssemblyName>AlibabaCloud.TeaAssert</AssemblyName>
-    <Version>0.0.1</Version>
+    <Version>0.0.2</Version>
     <LangVersion>5</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard2.0'">
