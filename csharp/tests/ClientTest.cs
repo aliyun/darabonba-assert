@@ -51,7 +51,7 @@ namespace tests
             {
                 Client.Fail("should failed");
             }
-            catch (Exception ex)
+            catch
             {
                 ok = false;
             }
