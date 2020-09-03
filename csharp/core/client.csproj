@@ -10,7 +10,7 @@
     <PackageReleaseNotes />
     <AssemblyName>AlibabaCloud.TeaAssert</AssemblyName>
     <Version>0.0.2</Version>
-    <LangVersion>5</LangVersion>
+    <LangVersion>8</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard2.0'">
     <DefineConstants>NETSTANDARD2_0</DefineConstants>
@@ -36,7 +36,5 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="xunit" Version="2.4.1" />
-    <PackageReference Include="xunit.assert" Version="2.4.1" />
   </ItemGroup>
 </Project>
