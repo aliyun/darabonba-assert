@@ -1,6 +1,6 @@
 {
   "name": "Assert",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "scope": "darabonba",
   "main": "./assert.tea",
   "test": "./assert_test.tea",
