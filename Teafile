@@ -1,13 +1,13 @@
 {
   "name": "Assert",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "scope": "darabonba",
   "main": "./assert.tea",
   "test": "./assert_test.tea",
   "releases": {
     "ts": "@darabonba/assert:^1.0.0",
     "java": "com.aliyun:tea-assert:0.1.1",
-    "csharp": "AlibabaCloud.TeaAssert:0.0.2",
+    "csharp": "AlibabaCloud.TeaAssert:0.0.3",
     "go": "github.com/alibabacloud-go/darabonba-assert/client:v1.0.0",
     "php": "alibabacloud/darabonba-assert:^0.1.0",
     "python": "alibabacloud_tea_assert:0.0.1"
