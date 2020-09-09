@@ -4,6 +4,9 @@
 
 namespace Alibabacloud\DarabonbaAssert;
 
+use Adbar\Dot;
+use PHPUnit\Framework\Assert;
+
 /**
  * tea assert module.
  */
@@ -34,12 +37,12 @@ class DarabonbaAssertClient
         $expect = new Dot($expect);
         $actual = new Dot($actual);
         $equal  = array_diff_assoc(
-            $expect->flatten(),
-            $actual->flatten()
-        ) == array_diff_assoc(
-            $actual->flatten(),
-            $expect->flatten()
-        );
+                $expect->flatten(),
+                $actual->flatten()
+            ) == array_diff_assoc(
+                $actual->flatten(),
+                $expect->flatten()
+            );
         Assert::assertTrue($equal, $message);
     }
 
@@ -75,6 +78,6 @@ class DarabonbaAssertClient
      */
     public static function contains($actual, $subStr, $message)
     {
-        Assert::assertTrue(false !== strpos($actual, $subStr));
+        Assert::assertTrue(false !== strpos($actual, $subStr), $message);
     }
 }
