@@ -32,5 +32,13 @@
   "python": {
     "package": "alibabacloud_tea_assert",
     "clientName": "client"
+  },
+  "cpp": {
+    "packageInfo": {
+      "git": {
+        "scope": "alibabacloud-sdk-cpp",
+        "project": "dara-assert"
+      }
+    }
   }
 }
