@@ -7,37 +7,51 @@ int main(int argc, char **argv) {
   return RUN_ALL_TESTS();
 }
 
-TEST(tests_Client, test_equal)
-{
-  string es = "s";
-  string as = "s";
-  Darabonba_Assert::Client::equal(es, as, make_shared<string>("msg"));
-  int ei = 90;
-  int ai = 90;
-  Darabonba_Assert::Client::equal(ei, ai, make_shared<string>("msg"));
-
-  string s1 = "s1";
-  string s2 = "s2";
+TEST(tests_Client, test_equal) {
+  Darabonba_Assert::Client::equal(
+      make_shared<string>("s"),
+      make_shared<string>("s"),
+      make_shared<string>("msg")
+  );
+  Darabonba_Assert::Client::equal(
+      make_shared<int>(1),
+      make_shared<int>(1),
+      make_shared<string>("test 1 failed")
+  );
   try {
-    Darabonba_Assert::Client::equal(s1, s2, make_shared<string>("msg"));
+    Darabonba_Assert::Client::equal(make_shared<string>("s1"),
+                                    make_shared<string>("s2"),
+                                    make_shared<string>("string not equal"));
     assert(false);
   } catch (boost::exception &e) {
     string msg = boost::current_exception_cast<std::runtime_error>()->what();
-    ASSERT_EQ("msg", msg);
+    ASSERT_EQ("string not equal", msg);
   }
 
+  try {
+    Darabonba_Assert::Client::equal(
+        make_shared<int>(1),
+        make_shared<string>("1"),
+        make_shared<string>("test 1 failed")
+    );
+    assert(false);
+  } catch (boost::exception &e) {
+    string msg = boost::current_exception_cast<std::runtime_error>()->what();
+    ASSERT_EQ("test 1 failed", msg);
+  }
 }
 
-TEST(tests_Client, test_mapEql)
-{
+TEST(tests_Client, test_mapEql) {
   shared_ptr<map<string, boost::any>> m1 = make_shared<map<string, boost::any>>(map<string, boost::any>({
-                                                                                    {"k1", 1},
-                                                                                    {"k2", string("v1")},
-                                                                                    {"k3", 0.1}
-  }));
+                                                                                                            {"k1", 1},
+                                                                                                            {"k2",
+                                                                                                             string("v1")},
+                                                                                                            {"k3", 0.1}
+                                                                                                        }));
   shared_ptr<map<string, boost::any>> m2 = make_shared<map<string, boost::any>>(map<string, boost::any>({
                                                                                                             {"k1", 1},
-                                                                                                            {"k2", string("v1")},
+                                                                                                            {"k2",
+                                                                                                             string("v1")},
                                                                                                             {"k3", 0.1}
                                                                                                         }));
 
@@ -45,12 +59,14 @@ TEST(tests_Client, test_mapEql)
 
   shared_ptr<map<string, boost::any>> m3 = make_shared<map<string, boost::any>>(map<string, boost::any>({
                                                                                                             {"k1", 1},
-                                                                                                            {"k2", string("v3")},
+                                                                                                            {"k2",
+                                                                                                             string("v3")},
                                                                                                             {"k3", 0.1}
                                                                                                         }));
   shared_ptr<map<string, boost::any>> m4 = make_shared<map<string, boost::any>>(map<string, boost::any>({
                                                                                                             {"k1", 1},
-                                                                                                            {"k2", string("v4")},
+                                                                                                            {"k2",
+                                                                                                             string("v4")},
                                                                                                             {"k3", 0.1}
                                                                                                         }));
   try {
@@ -63,13 +79,15 @@ TEST(tests_Client, test_mapEql)
 
   shared_ptr<map<string, boost::any>> m5 = make_shared<map<string, boost::any>>(map<string, boost::any>({
                                                                                                             {"k1", 1},
-                                                                                                            {"k2", string("v1")},
+                                                                                                            {"k2",
+                                                                                                             string("v1")},
                                                                                                             {"k3", 0.1},
                                                                                                             {"k4", m3}
                                                                                                         }));
   shared_ptr<map<string, boost::any>> m6 = make_shared<map<string, boost::any>>(map<string, boost::any>({
                                                                                                             {"k1", 1},
-                                                                                                            {"k2", string("v1")},
+                                                                                                            {"k2",
+                                                                                                             string("v1")},
                                                                                                             {"k3", 0.1},
                                                                                                             {"k4", m4}
                                                                                                         }));
@@ -82,11 +100,10 @@ TEST(tests_Client, test_mapEql)
   }
 }
 
-TEST(tests_Client, test_arrayEql)
-{
+TEST(tests_Client, test_arrayEql) {
   shared_ptr<vector<boost::any>> v1 = make_shared<vector<boost::any>>(vector<boost::any>(
       {1, 0.1, string("v")}
-      ));
+  ));
   shared_ptr<vector<boost::any>> v2 = make_shared<vector<boost::any>>(vector<boost::any>(
       {1, 0.1, string("v")}
   ));
@@ -121,8 +138,7 @@ TEST(tests_Client, test_arrayEql)
   }
 }
 
-TEST(tests_Client, test_fail)
-{
+TEST(tests_Client, test_fail) {
   try {
     Darabonba_Assert::Client::fail(make_shared<string>("msg"));
     assert(false);
@@ -132,13 +148,12 @@ TEST(tests_Client, test_fail)
   }
 }
 
-TEST(tests_Client, test_contains)
-{
+TEST(tests_Client, test_contains) {
   Darabonba_Assert::Client::contains(
       make_shared<string>("hello world"),
       make_shared<string>("hello"),
       make_shared<string>("msg")
-      );
+  );
 
   try {
     Darabonba_Assert::Client::contains(
