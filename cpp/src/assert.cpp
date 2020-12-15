@@ -10,15 +10,16 @@ using namespace std;
 
 using namespace Darabonba_Assert;
 
-template <typename T> shared_ptr<T> cast_any(boost::any value) {
+template<typename T> shared_ptr<T> cast_any(boost::any value) {
   if (typeid(shared_ptr<T>) == value.type()) {
     return boost::any_cast<shared_ptr<T>>(value);
   } else if (typeid(T) == value.type()) {
     return make_shared<T>(boost::any_cast<T>(value));
   }
+  return make_shared<T>(boost::any_cast<T>(value));
 }
 
-template <typename T> bool isinstance(boost::any value) {
+template<typename T> bool isinstance(boost::any value) {
   if (typeid(shared_ptr<T>) == value.type()) {
     return true;
   } else if (typeid(T) == value.type()) {
@@ -40,7 +41,7 @@ void Assert(boost::any val1, boost::any val2) {
       Assert(it.second, m2[it.first]);
     }
   } else if (isinstance<vector<boost::any>>(val1) &&
-             isinstance<vector<boost::any>>(val2)) {
+      isinstance<vector<boost::any>>(val2)) {
     vector<boost::any> v1 = *cast_any<vector<boost::any>>(val1);
     vector<boost::any> v2 = *cast_any<vector<boost::any>>(val2);
     for (int i = 0; i < v1.size(); i++) {
